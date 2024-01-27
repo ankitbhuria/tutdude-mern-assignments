@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <meta name="Description" content="Enter your description here" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/css/bootstrap.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    />
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <title>Form Validation</title>
+    <style>
+      * {
+        margin: 0%;
+        padding: 0%;
+        box-sizing: border-box;
+      }
+      form {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        text-align: center;
+      }
+
+      .field {
+        display: flex;
+        justify-content: space-evenly;
+        padding: 2%;
+      }
+      .field label {
+        width: 100%;
+      }
+      .field input {
+        width: 100%;
+        border-radius: 10px;
+      }
+      button {
+        color: white;
+        width: 20%;
+        height: 6vh;
+        border-radius: 20px;
+        border: none;
+        background-color: blue;
+      }
+      #success{color: green;}
+      #errmsg{color: red;}
+    </style>
+  </head>
+  <body>
+    <h3 class="text-center bg-primary">Form Validation</h3>
+    <p id="success"></p>
+    <p id="errmsg"></p>
+    <form action="/" class="container text-center">
+      <div class="field">
+        <label for="email">Email:</label>
+        <input type="text" id="email" />
+      </div>
+      <div class="field">
+        <label for="phone">Phone:</label>
+        <input type="text" id="phone" />
+      </div>
+      <div class="field">
+        <label for="pass">Password:</label>
+        <input type="text" id="pass" />
+      </div>
+      <div class="field">
+        <label for="cpass">Confirm Password</label>
+        <input type="text" id="cpass" />
+      </div>
+      <div class="field">
+        <button type="button" id="submitBtn">Submit</button>
+      </div>
+    </form>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.slim.min.js"></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+      integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.1/umd/popper.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/js/bootstrap.min.js"></script>
+  </body>
+  <script>
+      function isEmail(email) {
+          var regex = /^\b[A-Z0-9._%-]+@[A-Z0-9.-]+\.[A-Z]{2,4}\b$/i;
+          return regex.test(email);
+        }
+        $("#submitBtn").click(function () {
+            var errmsg = "";
+            var mismsg = "";
+      if ($("#email").val() == "") {
+        mismsg += "Email is not filled"
+      } else if ($("#phone").val() == "") {
+        mismsg += "Phone number is not filled"
+      } else if ($("#pass").val() == "") {
+        mismsg += "Password does not filled"
+      }
+      if (!isEmail($("#email").val())) {
+        errmsg += "Email is not valid"
+      } else if ($.isNumeric($("#phone").val()) == false) {
+        errmsg += "Phone number is not correctly formatted"
+      } else if (($("#pass").val() != $("#cpass").val())) {
+        errmsg += "Password does not match"
+      }
+      if(errmsg == "" && mismsg == ""){
+        $("#success").html('You are registered');
+        $("#errmsg").html("");
+      } else{
+        $("#success").html('');
+        $("#errmsg").html(errmsg + "<br />" + mismsg);
+      }
+      console.log(errmsg);
+      console.log($("#pass").val(), $("#cpass").val())
+    });
+  </script>
+</html>

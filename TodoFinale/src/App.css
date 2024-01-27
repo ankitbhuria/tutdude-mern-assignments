@@ -1,0 +1,120 @@
+@import url("https://fonts.googleapis.com/css2?family=Kalam&display=swap");
+* {
+  margin: 0%;
+  padding: 0%;
+  box-sizing: border-box;
+}
+.main {
+  width: 100vw;
+  min-width: 600px;
+  height: 100vh;
+}
+.header {
+  width: 100%;
+  /* font-size: 16px; */
+  color: white;
+  background-color: rgb(255, 196, 0);
+  padding: 4px 20px;
+  font-family: "Kalam", cursive;
+}
+.add-note {
+  width: 40%;
+  margin: auto;
+  margin-top: 40px;
+  box-shadow: 0px 0px 2px 2px rgb(211, 210, 210);
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  padding: 20px;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+}
+
+input,
+textarea {
+  margin: 2px;
+  border: none;
+}
+input[type="text"],
+textarea {
+  font-size: 20px;
+  border: none;
+  outline: none;
+  resize: none;
+}
+input[type="submit"] {
+  color: white;
+  background-color: rgb(255, 196, 0);
+  width: 40px;
+  height: 40px;
+  border-radius: 20px;
+  font-size: 20px;
+  position: absolute;
+  left: 66%;
+  top: 32%;
+  border: none;
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  -ms-border-radius: 20px;
+  -o-border-radius: 20px;
+}
+input::placeholder,
+textarea::placeholder {
+  color: rgb(160, 163, 165);
+}
+.notes {
+  width: 90%;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  
+  gap: 20px;
+  justify-content: space-around;
+  /* padding: 40px; */
+  flex-wrap: wrap;
+  margin: auto;
+}
+.note {
+  width: 90%;
+
+  margin: auto;
+  margin-top: 40px;
+  box-shadow: 0px 0px 2px 2px rgb(211, 210, 210);
+  display: flex;
+  /* justify-content: center; */
+  flex-direction: column;
+  padding: 20px;
+  border-radius: 10px;
+  line-break: anywhere;
+}
+
+.del-btn {
+  display: flex;
+  justify-content: flex-end;
+}
+.btn {
+  color: yellow;
+  background-color: rgba(196, 197, 196, 0.932);
+  border-radius: 20px;
+  border: 2px solid rgb(18, 219, 18);
+  padding: 10px;
+
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  -ms-border-radius: 20px;
+  -o-border-radius: 20px;
+}
+
+.note-title{
+    font-size: 20px;
+    font-weight: 900px;
+}
+
+@media screen and (max-width: 768px) {
+  
+  .notes{
+    grid-template-columns: repeat(2, 1fr);
+  }
+}

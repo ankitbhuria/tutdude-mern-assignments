@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Todo App</title>
+    <link rel="stylesheet" href="/css/style.css" />
+  </head>
+  <body>
+    <div class="box">
+      <h1>Todo App</h1>
+    </div>
+    <div class="box">
+      
+      <% for( let index = 0; index < todo.length; index++ ) { %>
+      <div class="item">
+        <input type="checkbox" name="tick" id="" />
+        <p><%= todo[index] %></p>
+      </div>
+      <% } %>
+      <form action="/" method="post">
+        <input type="text" name="todo" placeholder="Enter Any Task" />
+        <button type="submit">+</button>
+      </form>
+    </div>
+  </body>
+</html>

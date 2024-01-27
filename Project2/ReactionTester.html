@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Project2</title>
+    <style>
+      * {
+        margin: 0px;
+        padding: 0px;
+        box-sizing: border-box;
+      }
+
+      .container {
+        width: 100vw;
+        height: 100vh;
+        border: 2px solid red;
+        background-color: #fff;
+      }
+      .box {
+        width: 100px;
+        height: 100px;
+        border: 2px solid blue;
+        background-color: blue;
+        position: relative;
+        top: 0px;
+        left: 0px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Reaction Tester</h1>
+      <p>Click on the boxes as you can</p>
+      <div class="box" id="box"></div>
+    </div>
+  </body>
+  <script>
+    let box = document.getElementById("box");
+    var left;
+    var top1;
+    var wh;
+    function move() {
+      left = Math.floor(Math.random() * 300);
+      left = Math.floor(Math.random() * 300);
+      top1 = Math.floor(Math.random() * 300);
+      wh = Math.floor(Math.random() * 20) + 100;
+        box.style.left = `${left}px`;
+        box.style.top = `${top1}px`;
+        box.style.width = `${wh}px`;
+        box.style.height = `${wh}px`;
+        console.log(left, top, wh);
+        function randomColor(){let letters = '0123456789ABCDEF'
+        var color1 = '#';
+        for (let index = 0; index < 6; index++) {
+          color1 += letters[Math.floor(Math.random() * 16)];
+        }
+        return color1;
+      }
+        box.style.backgroundColor = randomColor();
+    };
+    start = new Date().getTime();
+    box.onclick = function () {
+      end = new Date().getTime();
+      let time = (end - start) / 1000;
+      alert(time);
+      move();
+    };
+  </script>
+</html>

@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Bootstrap demo</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+    <style>
+      .jumbotron {
+        background: center / contain no-repeat url("./jumbotron.jpeg");
+      }
+      #About{
+        padding-top: 50px;
+      }
+      .card-section {
+        display: flex;
+        justify-content: space-evenly;
+      }
+      .footer{
+        margin: 50px 0px 0px 0px;
+        background-color: aqua;
+        padding: 10%;
+        height: 400px;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        /* margin: auto; */
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body data-bs-spy="scroll" data-bs-target="#navbar" data-offset="150">
+    <nav
+      class="navbar navbar-expand-lg bg-body-tertiary fixed-top" id="navbar"
+      style="background-color: #e3f2fd"
+    >
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">My App</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#Hero">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#About">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#footer">Download My App</a>
+            </li>
+          </ul>
+          <form class="d-flex" role="search">
+            <input
+              class="form-control me-2"
+              type="text"
+              placeholder="Email"
+              aria-label="Email"
+            />
+            <input
+              class="form-control me-2"
+              type="password"
+              placeholder="Password"
+              aria-label="Password"
+            />
+            <button class="btn btn-success" type="submit">Search</button>
+          </form>
+        </div>
+      </div>
+    </nav>
+    <div class="jumbotron text-secondary py-5 text-center" id="Hero">
+      <div class="py-5">
+        <h1 class="display-5 text-white">My Awasome App</h1>
+        <div class="col-lg-12 mx-auto">
+          <p class="mb-4 text-white">
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Accusamus
+            velit unde impedit saepe inventore officia sit.
+          </p>
+          <br />
+          <br />
+          <p class="mb-4 text-white">
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit..
+          </p>
+          <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
+            <button type="button" class="btn btn-primary btn-lg px-4 gap-3">
+              Learn More
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="container text-center" id="About">
+      <h1>Why this app is awasome</h1>
+      <p>This app is awasome to use.</p>
+    </div>
+
+    <div class="container card-section">
+      <div class="card col-3">
+        <img src="./Busy Guy.gif" class="card-img-top" alt="..." />
+        <div class="card-body">
+          <h5 class="card-title">Card title</h5>
+          <p class="card-text">
+            This is a wider card with supporting text below as a natural lead-in
+            to additional content. This content is a little bit longer.
+          </p>
+          <p class="card-text">
+            <small class="text-muted">Last updated 3 mins ago</small>
+          </p>
+        </div>
+      </div>
+      <div class="card col-3">
+        <img src="./Busy Guy.gif" class="card-img-top" alt="..." />
+        <div class="card-body">
+          <h5 class="card-title">Card title</h5>
+          <p class="card-text">
+            This is a wider card with supporting text below as a natural lead-in
+            to additional content. This content is a little bit longer.
+          </p>
+          <p class="card-text">
+            <small class="text-muted">Last updated 3 mins ago</small>
+          </p>
+        </div>
+      </div>
+      <div class="card col-3">
+        <img src="./Busy Guy.gif" class="card-img-top" alt="..." />
+        <div class="card-body">
+          <h5 class="card-title">Card title</h5>
+          <p class="card-text">
+            This is a wider card with supporting text below as a natural lead-in
+            to additional content. This content is a little bit longer.
+          </p>
+          <p class="card-text">
+            <small class="text-muted">Last updated 3 mins ago</small>
+          </p>
+        </div>
+      </div>
+    </div>
+    <div class="footer" id="footer">
+        <div class="end">
+            <h3>Download The App!</h3>
+        <p>Really, why should I download the app??</p>
+        <a href="#"><img src="./download.png" alt="Download" style="width: 10vw; height: 10vh;" /></a>
+        </div>
+    </div>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+      integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

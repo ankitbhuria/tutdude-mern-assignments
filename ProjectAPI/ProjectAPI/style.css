@@ -1,0 +1,59 @@
+*{
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+    background-color: #494949;
+    color: white;
+}
+
+.card-container{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.temp-card{
+    width: 26%;
+    height: 70%;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(5, 1fr);
+    border-radius: 40px;
+    text-align: center;
+    align-items: center;
+    box-shadow: -2px -4px 10px 4px rgba(233, 233, 233, 0.178), 4px 4px 2px 4px rgba(0, 0, 0, 0.178);
+    overflow: hidden;
+    padding-top: 1%;
+    padding-bottom: 1%;
+}
+button{
+    width: 4rem;
+    height: 4rem;
+    border-radius: 100px;
+    border: none;
+    box-shadow: 4px 4px 10px 4px rgba(0, 0, 0, 0.178);
+}
+button:hover{
+    width: 4rem;
+    height: 4rem;
+    border-radius: 100px;
+    border: none;
+    box-shadow: -4px -4px 10px 4px rgba(0, 0, 0, 0.178);
+}
+.card-location{
+    font-size: 30px;
+    font-weight: 600;
+}
+.temp{
+    font-size: 90px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.fa-cloud{
+    font-size: 47px;
+    padding-bottom: 1rem;
+}
